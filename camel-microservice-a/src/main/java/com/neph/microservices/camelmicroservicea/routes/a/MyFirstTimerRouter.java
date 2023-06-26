@@ -1,4 +1,4 @@
-package com.neph.microservices.camelmicroservicea.routes;
+package com.neph.microservices.camelmicroservicea.routes.a;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  * @ Author Nephat Muchiri
  * Date 21/06/2023
  */
-//@Component
+@Component
 @RequiredArgsConstructor
 public class MyFirstTimerRouter extends RouteBuilder {
     private final GetCurrentTimeBean getCurrentTimeBean;

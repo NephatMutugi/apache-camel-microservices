@@ -1,4 +1,4 @@
-package com.neph.microservices.camelmicroservicea.routes;
+package com.neph.microservices.camelmicroservicea.routes.b;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
