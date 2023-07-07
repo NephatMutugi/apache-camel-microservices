@@ -10,10 +10,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class ActiveMQSenderRouter extends RouteBuilder {
     @Override
-    public void configure() throws Exception {
+    public void configure() {
         // timer
         from("timer:active-mq-timer?period=10000")
                 .transform().constant("My Message for Active MQ")
-                .to("activemq:my-active-mq-queue");
+                .log("${body}")
+                .to("activemq:my-activemq-queue");
     }
 }
