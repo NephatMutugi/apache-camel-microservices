@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  * @ Author Nephat Muchiri
  * Date 21/06/2023
  */
-@Component
+//@Component
 @RequiredArgsConstructor
 public class MyFirstTimerRouter extends RouteBuilder {
     private final GetCurrentTimeBean getCurrentTimeBean;
@@ -37,14 +37,14 @@ public class MyFirstTimerRouter extends RouteBuilder {
 }
 
 // Bean to generate custom message
-@Component
+//@Component
 class GetCurrentTimeBean{
     public String getCurrentTime(){
         return "Time now is " + LocalDateTime.now();
     }
 }
 
-@Component
+//@Component
 class SimpleLoggingProcessingComponent{
     private final Logger logger = LoggerFactory.getLogger(SimpleLoggingProcessingComponent.class);
     public void process(String message){
