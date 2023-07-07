@@ -3,3 +3,7 @@ server:
 spring:
   activemq:
     broker-url: tcp://0.0.0.0:61616
+
+activemq:
+  queue-name: my-activemq-queue
+
