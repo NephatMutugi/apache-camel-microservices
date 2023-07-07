@@ -13,7 +13,7 @@
 	<artifactId>camel-microservice-a</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>camel-microservice-a</name>
-	<description>Apache Camel Micorservice</description>
+	<description>Apache Camel Microservice</description>
 	<properties>
 		<java.version>17</java.version>
 <!--		<camel.version>4.0.0-M3</camel.version>-->
@@ -34,7 +34,6 @@
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-spring-boot-starter</artifactId>
 			<version>${camel.version}</version>
-<!--			<version>${camel.version}</version>-->
 		</dependency>
 
 		<dependency>
