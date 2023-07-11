@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+
 /**
  * @ Author Nephat Muchiri
  * Date 07/07/2023
@@ -16,6 +18,19 @@ public class ActiveMQReceiverRouter extends RouteBuilder {
     private final CamelMicroserviceConfigs microserviceConfigs;
     @Override
     public void configure() throws Exception {
-        from("activemq:" + microserviceConfigs.getQueueName());
+
+        // JSON
+        // Map : {  "id": 1000,  "from": "USD",  "to": "INR",  "conversionMultiple": 70}
+
+        from("activemq:" + microserviceConfigs.getQueueName())
+                .to("log:received-message-from-active-mq");
     }
+}
+
+class CurrencyExchange{
+    Long id;
+    String from;
+    String to;
+    BigDecimal conversionMultiple;
+
 }

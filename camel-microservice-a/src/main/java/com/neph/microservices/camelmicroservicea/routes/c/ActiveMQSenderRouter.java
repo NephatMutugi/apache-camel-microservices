@@ -19,8 +19,12 @@ public class ActiveMQSenderRouter extends RouteBuilder {
     @Override
     public void configure() {
         // timer
-        from("timer:active-mq-timer?period=10000")
-                .transform().constant("My Message for Active MQ")
+//        from("timer:active-mq-timer?period=10000")
+//                .transform().constant("My Message for Active MQ")
+//                .log("${body}")
+//                .to("activemq:" + camelMicroserviceConfigs.getQueueName());
+
+        from("file:files/json")
                 .log("${body}")
                 .to("activemq:" + camelMicroserviceConfigs.getQueueName());
     }
