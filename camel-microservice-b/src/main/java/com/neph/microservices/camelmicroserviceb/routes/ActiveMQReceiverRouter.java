@@ -27,6 +27,7 @@ public class ActiveMQReceiverRouter extends RouteBuilder {
     }
 }
 
+
 class CurrencyExchange{
     Long id;
     String from;
